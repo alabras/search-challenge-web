@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "react-scripts start",
     "awesome": "npm run test-ci && npm run lint",
     "test-ci": "npm test -- --reporters=default --reporters=jest-junit --coverage --watchAll=false --testPathIgnorePatterns=test/integration/.*$",
     "test": "react-scripts test",
@@ -10,6 +11,7 @@
     "lint-fix": "eslint src --fix"
   },
   "dependencies": {
+    "bootstrap": "^5.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3"
@@ -23,6 +25,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "jest-junit": "^12.2.0",
+    "node-sass": "^6.0.1",
     "prettier": "^2.3.1"
   },
   "jest": {
