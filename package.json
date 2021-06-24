@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "awesome": "npm run test-ci && npm run lint",
     "test-ci": "npm test -- --reporters=default --reporters=jest-junit --coverage --watchAll=false --testPathIgnorePatterns=test/integration/.*$",
     "test": "react-scripts test",
