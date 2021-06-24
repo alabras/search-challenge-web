@@ -18,7 +18,8 @@
     "plugin:jest-dom/recommended",
     "plugin:jest/recommended",
     "react-app",
-    "react-app/jest"
+    "react-app/jest",
+    "plugin:security/recommended"
   ],
   "plugins": [
     "react",
@@ -26,7 +27,8 @@
     "import",
     "react-hooks",
     "testing-library",
-    "jest-dom"
+    "jest-dom",
+    "security"
   ],
   "settings": {
     "react": {
