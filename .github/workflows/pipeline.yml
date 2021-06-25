@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Start At
         id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M-%S')"
+        run: echo "::set-output name=date::$(date +'%Y%m%d_%H%M%S')"
       - name: Check out the repo
         uses: actions/checkout@v2
       - name: Use Node 14
@@ -38,7 +38,7 @@ jobs:
           context: .
           push: true
           tags: |
-            alabra/search-challenge-web:$GITHUB_RUN_ID_${{ steps.date.outputs.date }}
+            alabra/search-challenge-web:${{ env.GITHUB_RUN_ID }}_${{ steps.date.outputs.date }}
             alabra/search-challenge-web:latest
           labels: |
             org.opencontainers.image.revision=${{ github.sha }}
