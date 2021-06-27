@@ -10,7 +10,11 @@
     "test": "react-scripts test",
     "lint": "eslint src",
     "lint-fix": "eslint src --fix",
-    "mutation": "stryker run"
+    "mutation": "stryker run",
+    "docker:build": "docker build -t search-challenger-web:latest .",
+    "snyk:auth": "if [ -z ${SNYK_TOKEN+x} ]; then echo 'Debe configurar variable de entorno SNYK_TOKEN. Ej: export SNYK_TOKEN=XXXX' && exit 1; fi && snyk auth $SNYK_TOKEN",
+    "snyk:package": "npm run snyk:auth && snyk test",
+    "snyk:docker": "npm run docker:build && npm run snyk:auth && snyk container test search-challenger-web:latest --file=Dockerfile"
   },
   "dependencies": {
     "@babel/plugin-syntax-jsx": "^7.14.5",
