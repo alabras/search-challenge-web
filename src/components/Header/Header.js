@@ -1,7 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './Header.scss'
 
-const Header = () => {
+const Header = (props) => {
+  const { search } = props
   return (
     <nav className='navbar navbar-expand fixed-top header' aria-label='header'>
       <div className='container-fluid'>
@@ -12,9 +14,13 @@ const Header = () => {
             src='https://www.lider.cl/catalogo/images/logo_lider_pride.svg'
           />
         </a>
+        {search}
       </div>
     </nav>
   )
+}
+Header.propTypes = {
+  search: PropTypes.object,
 }
 
 export default Header

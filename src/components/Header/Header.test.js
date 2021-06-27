@@ -14,4 +14,20 @@ describe('Render Header component', () => {
       'https://www.lider.cl/catalogo/images/logo_lider_pride.svg',
     )
   })
+
+  it('should not show search component when is not defined', () => {
+    render(<Header />)
+
+    const searchComponent = screen.queryByRole('search')
+
+    expect(searchComponent).not.toBeInTheDocument()
+  })
+
+  it('should be show search component when is defined', () => {
+    render(<Header search={<div role='search'>search</div>} />)
+
+    const searchComponent = screen.getByRole('search')
+
+    expect(searchComponent).toBeInTheDocument()
+  })
 })
