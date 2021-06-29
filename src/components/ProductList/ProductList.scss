@@ -1,0 +1,34 @@
+.product-list {
+  img {
+    min-width: 50px;
+    max-height: 220px;
+  }
+  .product-info {
+    padding: 0.5rem;
+    .product-description {
+      font-size: 16px;
+      font-weight: 400;
+      color: #6d6e71;
+      line-height: 1.5rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .product-brand {
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+    }
+    .product-description {
+      padding-left: 0.2rem;
+    }
+    .walmart-sales-price {
+      display: flex;
+      align-items: center;
+    }
+    .walmart-reference-price {
+      font-size: 12px;
+      text-decoration: line-through;
+      color: #6d6e71;
+    }
+  }
+}

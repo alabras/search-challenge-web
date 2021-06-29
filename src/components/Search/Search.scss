@@ -1,8 +1,14 @@
+@import '../../assets/global.scss';
+
 .search-box {
   width: 80%;
   input {
     border-radius: 26px;
     height: 35px;
     font-size: 16px;
+  }
+  .invalid-feedback {
+    padding-left: 1%;
+    color: $yellow;
   }
 }

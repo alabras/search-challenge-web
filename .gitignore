@@ -14,7 +14,6 @@
 
 # misc
 .DS_Store
-.env
 .env.local
 .env.development.local
 .env.test.local
@@ -26,3 +25,7 @@ yarn-error.log*
 
 # stryker temp files
 .stryker-tmp
+
+# Temporary env files
+/public/env-config.js
+env-config.js
