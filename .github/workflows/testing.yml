@@ -19,7 +19,9 @@ jobs:
       - name: Linter
         run: npm run lint
       - name: Unit Test
-        run: npm run test:unit
+        run: npm run test:unit-ci
+      - name: Integration Test
+        run: npm run test:integration-ci
       - name: Mutation Test
         run: npm run test:mutate
       - name: Snyk Packages
