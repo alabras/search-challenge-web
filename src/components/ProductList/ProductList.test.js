@@ -25,7 +25,7 @@ describe('render Product List', () => {
     render(<ProductList searchText={'searchText'} />)
 
     const errorMessage = await screen.findByText(
-      'Ups, tuvimos un problema 🙈. Debe ingresar algún texto para la busqueda',
+      'Debe ingresar algún texto para la busqueda',
     )
 
     expect(errorMessage).toBeInTheDocument()
@@ -45,11 +45,15 @@ describe('render Product List', () => {
     fetchSearchProducts.mockResolvedValue(searchProductResponse)
     render(<ProductList searchText={'searchText'} />)
 
-    const listProducts = await screen.findByRole('list')
-    const listItemsProducts = await screen.findAllByRole('listitem')
+    const listProducts = await screen.findByRole('list', {
+      name: 'Product list',
+    })
+    const listItemsProducts = await within(listProducts).findAllByRole(
+      'listitem',
+    )
 
     expect(listProducts).toBeInTheDocument()
-    expect(listItemsProducts.length).toBe(11)
+    expect(listItemsProducts.length).toBe(9)
   })
 
   it('should show brand, description, price, discount and basePrice, when search is palindrome', async () => {
@@ -108,5 +112,18 @@ describe('render Product List', () => {
     const title = screen.queryByRole('heading')
 
     expect(title).not.toBeInTheDocument()
+  })
+})
+
+describe('render pagination', () => {
+  it('should render pagination', async () => {
+    fetchSearchProducts.mockResolvedValue(searchProductResponse)
+    render(<ProductList searchText={'searchText'} />)
+
+    const pagination = await screen.findByRole('navigation', {
+      name: 'pagination',
+    })
+
+    expect(pagination).toBeInTheDocument()
   })
 })

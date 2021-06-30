@@ -4,22 +4,25 @@ import currencyFormat from '../../utils/format'
 import { fetchSearchProducts } from '../../api/search'
 import Loader from '../Loader/Loader'
 import './ProductList.scss'
+import Pagination from '../Pagination/Pagination'
+import ErrorMessage from '../ErrorMessage/ErrorMessage'
 
 const ProductList = (props) => {
   const { searchText } = props
   const [loading, setLoading] = useState(false)
-  const [products, setProducts] = useState([])
+  const [page, setPage] = useState(1)
+  const [productResult, setProductResult] = useState(undefined)
   const [error, setError] = useState(undefined)
 
   useEffect(() => {
     let didCancel = false
     const searchProducts = async (text) => {
+      setError(undefined)
       setLoading(true)
-      fetchSearchProducts(text)
+      fetchSearchProducts(text, page)
         .then((result) => {
           if (!didCancel) {
-            setProducts(result)
-            setError(undefined)
+            setProductResult(result)
           }
         })
         .catch((errorResult) => {
@@ -35,7 +38,7 @@ const ProductList = (props) => {
       searchProducts(searchText)
     }
     return () => (didCancel = true)
-  }, [searchText])
+  }, [searchText, page])
 
   const renderDiscount = (product) => {
     return product.discountPercent ? (
@@ -61,17 +64,18 @@ const ProductList = (props) => {
     <Fragment>
       <Loader isLoading={loading} />
       {error ? (
-        <p>Ups, tuvimos un problema 🙈. {error?.message}</p>
+        <ErrorMessage error={error} />
       ) : (
         <div role='region' aria-label='product list'>
-          {searchText ? (
+          {searchText && productResult ? (
             <Fragment>
               <h4>Resultados para {searchText}</h4>
               <div
                 className='row row-cols-1 row-cols-md-3 g-4 product-list'
                 role='list'
+                aria-label='Product list'
               >
-                {products.map((product) => (
+                {productResult?.products.map((product) => (
                   <div key={product.id} className='col' role='listitem'>
                     <div className='card h-100'>
                       <img
@@ -102,6 +106,11 @@ const ProductList = (props) => {
                   </div>
                 ))}
               </div>
+              <Pagination
+                page={productResult.page}
+                totalPages={productResult.totalPages}
+                onSearchPage={setPage}
+              />
             </Fragment>
           ) : (
             <></>

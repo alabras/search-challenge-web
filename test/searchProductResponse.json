@@ -1,101 +1,87 @@
-[
-  {
-    "id": 14,
-    "brand": "dcc gdodkñg",
-    "description": "odrnuh ixdta",
-    "image": "www.lider.cl/catalogo/images/smartphoneIcon.svg",
-    "price": 321561.5,
-    "basePrice": 643123,
-    "discountPercent": 50
-  },
-  {
-    "id": 572,
-    "brand": "dcc gdodkñg",
-    "description": "frky givgxzqk",
-    "image": "www.lider.cl/catalogo/images/electronicsIcon.svg",
-    "price": 423837,
-    "basePrice": 847674,
-    "discountPercent": 50
-  },
-  {
-    "id": 865,
-    "brand": "dcc gdodkñg",
-    "description": "exqñvj ttunh",
-    "image": "www.lider.cl/catalogo/images/homeIcon.svg",
-    "price": 228637.5,
-    "basePrice": 457275,
-    "discountPercent": 50
-  },
-  {
-    "id": 1028,
-    "brand": "dcc gdodkñg",
-    "description": "yfjhl ehcrpk",
-    "image": "www.lider.cl/catalogo/images/smartphoneIcon.svg",
-    "price": 259972.5,
-    "basePrice": 519945,
-    "discountPercent": 50
-  },
-  {
-    "id": 1310,
-    "brand": "dcc gdodkñg",
-    "description": "iuslfm mlscw",
-    "image": "www.lider.cl/catalogo/images/babyIcon.svg",
-    "price": 157525,
-    "basePrice": 315050,
-    "discountPercent": 50
-  },
-  {
-    "id": 1490,
-    "brand": "dcc gdodkñg",
-    "description": "ddcñ sznfcstr",
-    "image": "www.lider.cl/catalogo/images/smartphoneIcon.svg",
-    "price": 311428,
-    "basePrice": 622856,
-    "discountPercent": 50
-  },
-  {
-    "id": 1496,
-    "brand": "dcc gdodkñg",
-    "description": "xsjqn wpdqih",
-    "image": "www.lider.cl/catalogo/images/homeIcon.svg",
-    "price": 3975,
-    "basePrice": 7950,
-    "discountPercent": 50
-  },
-  {
-    "id": 2025,
-    "brand": "dcc gdodkñg",
-    "description": "mfys ubrkojpñ",
-    "image": "www.lider.cl/catalogo/images/gamesIcon.svg",
-    "price": 42932,
-    "basePrice": 85864,
-    "discountPercent": 50
-  },
-  {
-    "id": 2689,
-    "brand": "dcc gdodkñg",
-    "description": "tjnj nxmcvwif",
-    "image": "www.lider.cl/catalogo/images/smartphoneIcon.svg",
-    "price": 245110.5,
-    "basePrice": 490221,
-    "discountPercent": 50
-  },
-  {
-    "id": 2716,
-    "brand": "dcc gdodkñg",
-    "description": "oftetv sxgwl",
-    "image": "www.lider.cl/catalogo/images/electronicsIcon.svg",
-    "price": 53654,
-    "basePrice": 107308,
-    "discountPercent": 50
-  },
-  {
-    "id": 2887,
-    "brand": "dcc gdodkñg",
-    "description": "hykpd jwfavb",
-    "image": "www.lider.cl/catalogo/images/computerIcon.svg",
-    "price": 360416,
-    "basePrice": 720832,
-    "discountPercent": 50
-  }
-]
+{
+  "products": [
+    {
+      "id": 14,
+      "brand": "dcc gdodkñg",
+      "description": "odrnuh ixdta",
+      "image": "www.lider.cl/catalogo/images/smartphoneIcon.svg",
+      "price": 321561.5,
+      "basePrice": 643123,
+      "discountPercent": 50
+    },
+    {
+      "id": 23,
+      "brand": "dasad",
+      "description": "zyss vmcñvzwt",
+      "image": "www.lider.cl/catalogo/images/bedRoomIcon.svg",
+      "price": 185387.5,
+      "basePrice": 370775,
+      "discountPercent": 50
+    },
+    {
+      "id": 97,
+      "brand": "dasad",
+      "description": "ctwod aewñte",
+      "image": "www.lider.cl/catalogo/images/electronicsIcon.svg",
+      "price": 383601,
+      "basePrice": 767202,
+      "discountPercent": 50
+    },
+    {
+      "id": 225,
+      "brand": "dasad",
+      "description": "smxnm qbbdlh",
+      "image": "www.lider.cl/catalogo/images/smartphoneIcon.svg",
+      "price": 28860,
+      "basePrice": 57720,
+      "discountPercent": 50
+    },
+    {
+      "id": 431,
+      "brand": "dasad",
+      "description": "ypkkmh veghf",
+      "image": "www.lider.cl/catalogo/images/bicycleIcon.svg",
+      "price": 117218,
+      "basePrice": 234436,
+      "discountPercent": 50
+    },
+    {
+      "id": 559,
+      "brand": "dasad",
+      "description": "jjkfac adubt",
+      "image": "www.lider.cl/catalogo/images/bicycleIcon.svg",
+      "price": 9964,
+      "basePrice": 19928,
+      "discountPercent": 50
+    },
+    {
+      "id": 1399,
+      "brand": "dasad",
+      "description": "ikejc osddak",
+      "image": "www.lider.cl/catalogo/images/toysIcon.svg",
+      "price": 246861,
+      "basePrice": 493722,
+      "discountPercent": 50
+    },
+    {
+      "id": 2324,
+      "brand": "dasad",
+      "description": "egmpqg iwbvf",
+      "image": "www.lider.cl/catalogo/images/furnitureIcon.svg",
+      "price": 3482.5,
+      "basePrice": 6965,
+      "discountPercent": 50
+    },
+    {
+      "id": 2697,
+      "brand": "dasad",
+      "description": "pnyn rlxbewnk",
+      "image": "www.lider.cl/catalogo/images/smartphoneIcon.svg",
+      "price": 195270.5,
+      "basePrice": 390541,
+      "discountPercent": 50
+    }
+  ],
+  "totalPages": 1,
+  "page": 1
+}
