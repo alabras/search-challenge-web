@@ -60,6 +60,7 @@
         "lines": 80
       }
     },
+    "coverageDirectory": "./reports/coverage",
     "coveragePathIgnorePatterns": [
       "src/index.js",
       "src/setupTests.js",
