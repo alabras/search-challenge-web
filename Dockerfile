@@ -1,9 +1,10 @@
 FROM node:lts-alpine as Build
 WORKDIR /app
 COPY . ./
-RUN npm install
 ENV NODE_ENV=production
+ENV DISABLE_ESLINT_PLUGIN=true
 ENV GENERATE_SOURCEMAP=false
+RUN npm install ci --production
 RUN npm run build
 
 
