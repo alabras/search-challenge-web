@@ -1,0 +1,33 @@
+name: Pipeline
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Use Node 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install
+        run: npm install
+      - name: Linter
+        run: npm run lint
+      - name: Unit Test
+        run: npm run test:unit
+      - name: Mutation Test
+        run: npm run test:mutate
+      - name: Snyk Packages
+        run: |
+          npx snyk auth ${{ secrets.SNYK_TOKEN }}
+          npx snyk monitor --project-name=search-challenge-web
+      - name: Snyk Container
+        run: |
+          npx snyk auth ${{ secrets.SNYK_TOKEN }}
+          npm run docker:build
+          npx snyk container monitor search-challenger-web:latest --file=Dockerfile --project-name=search-challenge-web
