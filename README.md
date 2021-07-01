@@ -19,8 +19,8 @@ La estructura de carpetas es la siguiente:
 
 - .github/workflows: Donde se encuentra definido los pipelines.
 - docs/adr: Listado de deficiones
+- coverage: Resultado de coverage de pruebas unitarias.
 - reports
-  - coverage: Resultado de coverage de pruebas unitarias.
   - junit: Reporte de las pruebas unitarias y de integración en formato xml.
   - mutation: Resultado de las pruebas de mutación en formato html.
 - src
